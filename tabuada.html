@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+<h1>Gerador de Tabuada</h1>
+    <input type="number" id="num1" placeholder="Tabuada do Número: ">
+    <button onclick="gerarTabuada()">Gerar</button>
+    <ul id="tabuada">
+
+ </ul>
+
+    <script src="funcoes.js"></script>
+</body>
+<script>
+    function gerarTabuada(){
+ let num = document.getElementById("num1").value
+ 
+ //for(inicialization;contition;increment)
+ for(let i = 0; i < 11; i=i+1 ){
+    let num = document.getElementById("num1").value
+    let elem = document.createElement("li")
+    let res = num * i
+    elem.innerHTML = num + " X " + i + " = " + res
+    document.getElementById("tabuada").append(elem)
+ }
+}
+</script>
+</html>
